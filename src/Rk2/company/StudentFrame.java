@@ -30,15 +30,15 @@ public class StudentFrame extends JFrame {
          sPage.setVisible(false);
          add(sPage);
 
-        studentOrderBookPage=new StudentOrderBookPage();
-        studentOrderBookPage.setLocation(0,0);
-        studentOrderBookPage.setVisible(false);
-        add(studentOrderBookPage);
+         studentOrderBookPage=new StudentOrderBookPage();
+         studentOrderBookPage.setLocation(0,0);
+         studentOrderBookPage.setVisible(false);
+         add(studentOrderBookPage);
 
-        studentListPage=new StudentListPage();
-        studentListPage.setLocation(0,0);
-        studentListPage.setVisible(false);
-        add(studentListPage);
+         studentListPage=new StudentListPage();
+         studentListPage.setLocation(0,0);
+         studentListPage.setVisible(false);
+         add(studentListPage);
       }
 
 }

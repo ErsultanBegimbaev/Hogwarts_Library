@@ -100,7 +100,7 @@ public class StudentRegistration extends Container {
 
 
                backbutton=new JButton();
-              URL burl=StudentRegistration.class.getResource("icon/backq.png");
+               URL burl=StudentRegistration.class.getResource("icon/backq.png");
                ImageIcon b=new ImageIcon(burl);
                backbutton.setBounds(150,350,140,50);
                backbutton.setIcon(b);

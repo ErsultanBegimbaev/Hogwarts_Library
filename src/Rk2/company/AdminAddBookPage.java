@@ -54,8 +54,8 @@ public class AdminAddBookPage extends Container {
 
                      try{
                          BookDate book=new BookDate(booID.getText(), title.getText(), author.getText(), data.getText(), null);
-                            Admin.addBook(book);
-                                JOptionPane.showMessageDialog(null,"InsertedBook");
+                         Admin.addBook(book);
+                         JOptionPane.showMessageDialog(null,"InsertedBook");
                      }catch (Exception ex){
                          ex.printStackTrace();
                      }

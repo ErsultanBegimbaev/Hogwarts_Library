@@ -26,21 +26,21 @@ public class Admin  {
               sd.setKindOfOperation("Add_Book");
               sd.setBook(b);
               try{
-                   outputStream.writeObject(sd);
+                  outputStream.writeObject(sd);
                   System.out.println("book written");
               }catch (Exception ex){
                   ex.printStackTrace();
               }
            }
            public static ArrayList<BookDate> listBooks(){
-                  ArrayList<BookDate> books=new ArrayList<>();
+                 ArrayList<BookDate> books=new ArrayList<>();
                  StoreOfDates sd=new StoreOfDates();
                  sd.setKindOfOperation("List_Books");
                  sd.setBooks(books);
                  try{
                      outputStream.writeObject(sd);
                      if((sd=(StoreOfDates) inputStream.readObject()) !=null){
-                              books=sd.getBooks();
+                         books=sd.getBooks();
                      }
                  }catch (Exception ex){
                      ex.printStackTrace();

@@ -43,10 +43,10 @@ public class StudentMainMenu  extends Container {
 ///////
        loginbutton=new JButton("");
        loginbutton.setBounds(185,290,150,50);
-        ImageIcon loginicon;
-        URL LOG=StudentMainMenu.class.getResource("icon/loginbutton.png");
-        loginicon=new ImageIcon(LOG);
-        loginbutton.setIcon(loginicon);
+       ImageIcon loginicon;
+       URL LOG=StudentMainMenu.class.getResource("icon/loginbutton.png");
+       loginicon=new ImageIcon(LOG);
+       loginbutton.setIcon(loginicon);
        add(loginbutton);
              loginbutton.addActionListener(new ActionListener() {
                  @Override
@@ -54,16 +54,16 @@ public class StudentMainMenu  extends Container {
                      ArrayList<Student> students=StudentConnectionbetween.listStudents();
                     for(int i=0;i<students.size();i++){
                              if(students.get(i).getLogin().equals(usertxt.getText()) && students.get(i).getPassword().equals(passwordtxt.getText())){
-                                               JOptionPane.showMessageDialog(null,"Welcome!");
-                                               StudentConnectionbetween.Loginadd(students.get(i).getLogin());
-                                                StudentConnectionbetween.showStudentPage();
-                                                setVisible(false);
-                                                usertxt.setText("");
-                                                passwordtxt.setText("");
-                                                String name=students.get(i).getName();
-                                                String surname=students.get(i).getSurname();
-                                                StudentOrderBookPage.addName(name);
-                                                StudentOrderBookPage.addSurname(surname);
+                                       JOptionPane.showMessageDialog(null,"Welcome!");
+                                       StudentConnectionbetween.Loginadd(students.get(i).getLogin());
+                                       StudentConnectionbetween.showStudentPage();
+                                       setVisible(false);
+                                       usertxt.setText("");
+                                       passwordtxt.setText("");
+                                       String name=students.get(i).getName();
+                                       String surname=students.get(i).getSurname();
+                                       StudentOrderBookPage.addName(name);
+                                       StudentOrderBookPage.addSurname(surname);
                              }
                     }
                  }
@@ -71,9 +71,9 @@ public class StudentMainMenu  extends Container {
        /////////////////////////////////////
           forgotbutton=new JButton();//signup burron
           forgotbutton.setBounds(365,290,150,50);
-           URL fr=StudentMainMenu.class.getResource("icon/Signupbuttonex.png");
-           ImageIcon forgoricon=new ImageIcon(fr);
-            forgotbutton.setIcon(forgoricon);
+          URL fr=StudentMainMenu.class.getResource("icon/Signupbuttonex.png");
+          ImageIcon forgoricon=new ImageIcon(fr);
+          forgotbutton.setIcon(forgoricon);
           add(forgotbutton);
           forgotbutton.addActionListener(new ActionListener() {
               @Override
@@ -82,13 +82,13 @@ public class StudentMainMenu  extends Container {
               }
           });
           ////////////////////////////////////////////////////
-         registr=new JButton();//forgot button
-         registr.setBounds(280,345,150,50);
+          registr=new JButton();//forgot button
+          registr.setBounds(280,345,150,50);
           URL rg=StudentMainMenu.class.getResource("icon/Forgoex.png");
           ImageIcon rgicon=new ImageIcon(rg);
           registr.setIcon(rgicon);
-         add(registr);
-         registr.addActionListener(new ActionListener() {
+          add(registr);
+          registr.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
 
