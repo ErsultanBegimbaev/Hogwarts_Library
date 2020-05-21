@@ -90,7 +90,7 @@ public class StudentConnectionbetween {
                             if((sd=(StoreOfDates) inputStream.readObject() )!=null){
                                       students=sd.getStudents();
                                         for(Student aa: students){
-                                            System.out.println(aa);
+                                          //  System.out.println(aa);
                                         }
                             }
                        }catch (Exception ex){
