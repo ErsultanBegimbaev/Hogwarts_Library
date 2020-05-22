@@ -52,11 +52,11 @@ public class StudentMainMenu  extends Container {
                  @Override
                  public void actionPerformed(ActionEvent e) {
                      ArrayList<Student> students=StudentConnectionbetween.listStudents();
-                    for(int i=0;i<students.size();i++){
+                     if(usertxt.getText().equals("") || passwordtxt.getText().equals("")){
+                              JOptionPane.showMessageDialog(null,"enter Login and password!","",JOptionPane.ERROR_MESSAGE);
+                     }
 
-                          if(!students.get(i).getLogin().equals(usertxt.getText()) || !students.get(i).getPassword().equals(passwordtxt.getText())){
-                            JOptionPane.showMessageDialog(null,"Wrong login or password","",JOptionPane.ERROR_MESSAGE);
-                          }
+                    for(int i=0;i<students.size();i++){
 
                              if(students.get(i).getLogin().equals(usertxt.getText()) && students.get(i).getPassword().equals(passwordtxt.getText())){
                                  JOptionPane.showMessageDialog(null,"Welcome!");
