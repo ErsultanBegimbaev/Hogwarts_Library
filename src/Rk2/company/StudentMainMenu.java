@@ -65,6 +65,12 @@ public class StudentMainMenu  extends Container {
                                  StudentOrderBookPage.addName(name);
                                  StudentOrderBookPage.addSurname(surname);
                              }
+                             else{
+                                 JOptionPane.showMessageDialog(null," Wrong login or password","",JOptionPane.ERROR_MESSAGE);
+                                 usertxt.setText("");
+                                 passwordtxt.setText("");
+                                 break;
+                             }
                     }
                  }
              });

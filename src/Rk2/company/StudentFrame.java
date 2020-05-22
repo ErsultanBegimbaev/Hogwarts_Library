@@ -42,6 +42,7 @@ public class StudentFrame extends JFrame {
 
          studentForgotPage=new StudentForgotPage();
          studentForgotPage.setLocation(0,0);
+         studentForgotPage.setVisible(false);
          add(studentForgotPage);
       }
 
