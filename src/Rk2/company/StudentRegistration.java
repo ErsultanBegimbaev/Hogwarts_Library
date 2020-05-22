@@ -22,6 +22,7 @@ public class StudentRegistration extends Container {
      JComboBox course;
 
      JButton confirm;
+     JButton check;
      JButton backbutton;
     public StudentRegistration(){
         String[] faculty={"Gryffindor","Ravenclaw","Hufflepuff", "Slythering"};
@@ -55,17 +56,30 @@ public class StudentRegistration extends Container {
              facultis.setBounds(300,270,200,20);
              add(facultis);
 
-              course=new JComboBox(grades);
-              course.setBounds(300,310,200,20);
-              add(course);
+             course=new JComboBox(grades);
+             course.setBounds(300,310,200,20);
+             add(course);
 
-              confirm=new JButton();
-              URL url=StudentRegistration.class.getResource("icon/Confirm.png");
-              ImageIcon icon=new ImageIcon(url);
-              confirm.setBounds(450,350,140,50);
-              confirm.setIcon(icon);
-              add(confirm);
-              confirm.addActionListener(new ActionListener() {
+             check=new JButton();
+             URL ch=StudentRegistration.class.getResource("icon/checkisit.jpg");
+             ImageIcon checkicon=new ImageIcon(ch);
+             check.setBounds(520,100,100,40);
+             check.setIcon(checkicon);
+             add(check);
+             check.addActionListener(new ActionListener() {
+                 @Override
+                 public void actionPerformed(ActionEvent e) {
+                     Search();
+                 }
+             });
+             confirm=new JButton();
+             URL url=StudentRegistration.class.getResource("icon/Confirm.png");
+             ImageIcon icon=new ImageIcon(url);
+             confirm.setBounds(450,350,140,50);
+             confirm.setIcon(icon);
+             add(confirm);
+
+             confirm.addActionListener(new ActionListener() {
                   @Override
                   public void actionPerformed(ActionEvent e) {
                       String Login=logintxt.getText();
@@ -91,21 +105,16 @@ public class StudentRegistration extends Container {
                          }
 
 
-
-
-
-
                   }
               });
 
-
-               backbutton=new JButton();
-               URL burl=StudentRegistration.class.getResource("icon/backq.png");
-               ImageIcon b=new ImageIcon(burl);
-               backbutton.setBounds(150,350,140,50);
-               backbutton.setIcon(b);
-               add(backbutton);
-                backbutton.addActionListener(new ActionListener() {
+             backbutton=new JButton();
+             URL burl=StudentRegistration.class.getResource("icon/backq.png");
+             ImageIcon b=new ImageIcon(burl);
+             backbutton.setBounds(150,350,140,50);
+             backbutton.setIcon(b);
+             add(backbutton);
+             backbutton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         setVisible(false);
@@ -117,5 +126,21 @@ public class StudentRegistration extends Container {
                     }
                 });
         add(background);
+    }
+
+    public void Search(){
+        ArrayList<Student> students=StudentConnectionbetween.listStudents();
+        int counter=0;
+        for(int i=0;i<students.size();i++){
+            if(students.get(i).getLogin().equals(logintxt.getText())){
+                counter++;
+            }
+
+        }
+        if(counter>0){
+            JOptionPane.showMessageDialog(null,"username is busy","",JOptionPane.ERROR_MESSAGE);
+            logintxt.setText("");
+            counter--;
+        }
     }
 }
