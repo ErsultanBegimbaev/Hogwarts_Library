@@ -53,6 +53,11 @@ public class StudentMainMenu  extends Container {
                  public void actionPerformed(ActionEvent e) {
                      ArrayList<Student> students=StudentConnectionbetween.listStudents();
                     for(int i=0;i<students.size();i++){
+
+                          if(!students.get(i).getLogin().equals(usertxt.getText()) || !students.get(i).getPassword().equals(passwordtxt.getText())){
+                            JOptionPane.showMessageDialog(null,"Wrong login or password","",JOptionPane.ERROR_MESSAGE);
+                          }
+
                              if(students.get(i).getLogin().equals(usertxt.getText()) && students.get(i).getPassword().equals(passwordtxt.getText())){
                                  JOptionPane.showMessageDialog(null,"Welcome!");
                                  StudentConnectionbetween.Loginadd(students.get(i).getLogin());
@@ -65,13 +70,9 @@ public class StudentMainMenu  extends Container {
                                  StudentOrderBookPage.addName(name);
                                  StudentOrderBookPage.addSurname(surname);
                              }
-                             else{
-                                 JOptionPane.showMessageDialog(null," Wrong login or password","",JOptionPane.ERROR_MESSAGE);
-                                 usertxt.setText("");
-                                 passwordtxt.setText("");
-                                 break;
-                             }
+
                     }
+
                  }
              });
        /////////////////////////////////////

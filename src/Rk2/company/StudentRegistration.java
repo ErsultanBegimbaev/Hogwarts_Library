@@ -24,7 +24,7 @@ public class StudentRegistration extends Container {
      JButton confirm;
      JButton backbutton;
     public StudentRegistration(){
-        String[] faculty={"Gryffindor"," Ravenclaw","Hufflepuff", "Slythering"};
+        String[] faculty={"Gryffindor","Ravenclaw","Hufflepuff", "Slythering"};
         String[] grades={"1", "2", "3", "4"};
         setSize(770,456);//512 384
         setLayout(null);
@@ -110,6 +110,10 @@ public class StudentRegistration extends Container {
                     public void actionPerformed(ActionEvent e) {
                         setVisible(false);
                         StudentConnectionbetween.showStudentMenu();
+                        logintxt.setText("");
+                        passwordtxt.setText("");
+                        nametxt.setText("");
+                        surnametxt.setText("");
                     }
                 });
         add(background);
