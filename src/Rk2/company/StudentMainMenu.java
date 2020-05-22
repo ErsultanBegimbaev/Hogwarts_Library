@@ -32,9 +32,9 @@ public class StudentMainMenu  extends Container {
               usertxt.setBounds(270,131,160,25);
               add(usertxt);
 
-             passwordtxt=new JPasswordField();
-             passwordtxt.setBounds(270,225,160,25);
-             add(passwordtxt);
+              passwordtxt=new JPasswordField();
+              passwordtxt.setBounds(270,225,160,25);
+              add(passwordtxt);
 
        /*  ImageIcon loginicon;
          URL url=StudentMainMenu.class.getResource("8925.jpg");
@@ -54,16 +54,16 @@ public class StudentMainMenu  extends Container {
                      ArrayList<Student> students=StudentConnectionbetween.listStudents();
                     for(int i=0;i<students.size();i++){
                              if(students.get(i).getLogin().equals(usertxt.getText()) && students.get(i).getPassword().equals(passwordtxt.getText())){
-                                       JOptionPane.showMessageDialog(null,"Welcome!");
-                                       StudentConnectionbetween.Loginadd(students.get(i).getLogin());
-                                       StudentConnectionbetween.showStudentPage();
-                                       setVisible(false);
-                                       usertxt.setText("");
-                                       passwordtxt.setText("");
-                                       String name=students.get(i).getName();
-                                       String surname=students.get(i).getSurname();
-                                       StudentOrderBookPage.addName(name);
-                                       StudentOrderBookPage.addSurname(surname);
+                                 JOptionPane.showMessageDialog(null,"Welcome!");
+                                 StudentConnectionbetween.Loginadd(students.get(i).getLogin());
+                                 StudentConnectionbetween.showStudentPage();
+                                 setVisible(false);
+                                 usertxt.setText("");
+                                 passwordtxt.setText("");
+                                 String name=students.get(i).getName();
+                                 String surname=students.get(i).getSurname();
+                                 StudentOrderBookPage.addName(name);
+                                 StudentOrderBookPage.addSurname(surname);
                              }
                     }
                  }
@@ -91,7 +91,7 @@ public class StudentMainMenu  extends Container {
           registr.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-
+                 
              }
          });
 

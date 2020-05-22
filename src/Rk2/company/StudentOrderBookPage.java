@@ -27,7 +27,7 @@ public class StudentOrderBookPage extends Container {
         books=list.toArray(new BookDate[list.size()]);
 
             JComboBox comboBox=new JComboBox(books);
-            comboBox.setBounds(230,130,350,20);
+            comboBox.setBounds(190,130,400,20);
             add(comboBox);
 
             take=new JButton();
