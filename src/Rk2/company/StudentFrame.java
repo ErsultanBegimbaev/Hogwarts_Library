@@ -8,7 +8,7 @@ public class StudentFrame extends JFrame {
     public static SPage sPage;
     public static StudentOrderBookPage studentOrderBookPage;
     public static StudentListPage studentListPage;
-
+    public static StudentForgotPage studentForgotPage;
     public StudentFrame(){
         setTitle(" SFrame");
         setSize(770,456);
@@ -39,6 +39,10 @@ public class StudentFrame extends JFrame {
          studentListPage.setLocation(0,0);
          studentListPage.setVisible(false);
          add(studentListPage);
+
+         studentForgotPage=new StudentForgotPage();
+         studentForgotPage.setLocation(0,0);
+         add(studentForgotPage);
       }
 
 }

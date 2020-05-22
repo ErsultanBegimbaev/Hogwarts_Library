@@ -31,6 +31,7 @@ public class StudentConnectionbetween {
         StudentConnectionbetween.frame.sPage.setVisible(false);
         StudentConnectionbetween.frame.studentOrderBookPage.setVisible(false);
         StudentConnectionbetween.frame.studentListPage.setVisible(false);
+        StudentConnectionbetween.frame.studentForgotPage.setVisible(false);
     }
     public static void showStudentMenu(){
         StudentConnectionbetween.frame.studentRegistration.setVisible(false);
@@ -38,6 +39,7 @@ public class StudentConnectionbetween {
         StudentConnectionbetween.frame.sPage.setVisible(false);
         StudentConnectionbetween.frame.studentOrderBookPage.setVisible(false);
         StudentConnectionbetween.frame.studentListPage.setVisible(false);
+        StudentConnectionbetween.frame.studentForgotPage.setVisible(false);
     }
     public static void showStudentPage(){
         StudentConnectionbetween.frame.studentRegistration.setVisible(false);
@@ -45,6 +47,7 @@ public class StudentConnectionbetween {
         StudentConnectionbetween.frame.sPage.setVisible(true);
         StudentConnectionbetween.frame.studentOrderBookPage.setVisible(false);
         StudentConnectionbetween.frame.studentListPage.setVisible(false);
+        StudentConnectionbetween.frame.studentForgotPage.setVisible(false);
     }
     public static void Loginadd(String login){ accaunt=login;}
 
@@ -54,18 +57,27 @@ public class StudentConnectionbetween {
         StudentConnectionbetween.frame.sPage.setVisible(false);
         StudentConnectionbetween.frame.studentOrderBookPage.setVisible(true);
         StudentConnectionbetween.frame.studentListPage.setVisible(false);
+        StudentConnectionbetween.frame.studentForgotPage.setVisible(false);
     }
     public static void showListPage(){
         StudentConnectionbetween.frame.studentRegistration.setVisible(false);
         StudentConnectionbetween.frame.studentMainMenu.setVisible(false);
         StudentConnectionbetween.frame.sPage.setVisible(false);
         StudentConnectionbetween.frame.studentOrderBookPage.setVisible(false);
+        StudentConnectionbetween.frame.studentForgotPage.setVisible(false);
         StudentConnectionbetween.frame.studentListPage.setVisible(true);
         ArrayList<Orders> table=Orderlist();
         StudentConnectionbetween.frame.studentListPage.Table(table);
 
     }
-
+    public static void showForgotPage(){
+        StudentConnectionbetween.frame.studentRegistration.setVisible(false);
+        StudentConnectionbetween.frame.studentMainMenu.setVisible(false);
+        StudentConnectionbetween.frame.sPage.setVisible(false);
+        StudentConnectionbetween.frame.studentOrderBookPage.setVisible(false);
+        StudentConnectionbetween.frame.studentForgotPage.setVisible(true);
+        StudentConnectionbetween.frame.studentListPage.setVisible(false);
+    }
 
         public static void addStudent(Student student){
             StoreOfDates sd=new StoreOfDates();

@@ -91,7 +91,7 @@ public class StudentMainMenu  extends Container {
           registr.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 
+                 StudentConnectionbetween.showForgotPage();
              }
          });
 
